@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{be05aac5-45ac-407a-8e05-549429a5d82e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\TextureShader">
+      <UniqueIdentifier>{c4b4162c-af56-4b5b-b31c-dea9124d079d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\tesselatedWaveShader">
+      <UniqueIdentifier>{58beee39-b30a-4bd8-9df4-8387dbbfb572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\sandBottom">
+      <UniqueIdentifier>{9ef3c3c1-9b40-459f-a0fc-1ebeba709543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\DepthShader">
+      <UniqueIdentifier>{57f99f1d-897c-4367-bb42-9fda5066b351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses">
+      <UniqueIdentifier>{069c9bdc-a3f1-4309-8286-74b4f48f7e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses\screenWobble">
+      <UniqueIdentifier>{0f240a61-5376-4978-89c6-11b452b564bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses\MotionBlur">
+      <UniqueIdentifier>{cd56d363-5504-4583-93cd-5598264ddf7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses\UnderWaterFilter">
+      <UniqueIdentifier>{0b8bf0ef-76dd-44f6-9c6c-226e59b473b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses\UnderWaterFilter\Horizontal Blur">
+      <UniqueIdentifier>{54066a2d-61f8-4404-a281-a55a2b815300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses\UnderWaterFilter\Vertical Blur">
+      <UniqueIdentifier>{12d0e05e-e5a2-4811-89c0-6f723e8ce418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses\UnderWaterFilter\DepthDarkening">
+      <UniqueIdentifier>{9608ec6c-d2f0-493e-ad15-1fe75182812c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\PostProcesses\_Reusable_Shaders">
+      <UniqueIdentifier>{42498d78-618a-4834-8cb4-2d69df93cd2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\ShadowShader">
+      <UniqueIdentifier>{8133b601-2255-45c2-9313-c6a2ac18438b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shader_h_cpp_files\TextureShader.cpp">
+      <Filter>Shaders\TextureShader</Filter>
+    </ClCompile>
+    <ClCompile Include="shader_h_cpp_files\MotionBlurShader.cpp">
+      <Filter>Shaders\PostProcesses\MotionBlur</Filter>
+    </ClCompile>
+    <ClCompile Include="tessWaveShader.cpp">
+      <Filter>Shaders\tesselatedWaveShader</Filter>
+    </ClCompile>
+    <ClCompile Include="SandBottomShader.cpp">
+      <Filter>Shaders\sandBottom</Filter>
+    </ClCompile>
+    <ClCompile Include="shader_h_cpp_files\HorizontalBlurShader.cpp">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\Horizontal Blur</Filter>
+    </ClCompile>
+    <ClCompile Include="VerticalBlurShader.cpp">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\Vertical Blur</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthDarkeningShader.cpp">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\DepthDarkening</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenWobbleShader.cpp">
+      <Filter>Shaders\PostProcesses\screenWobble</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthShader.cpp">
+      <Filter>Shaders\DepthShader</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadowShader.cpp">
+      <Filter>Shaders\ShadowShader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shader_h_cpp_files\TextureShader.h">
+      <Filter>Shaders\TextureShader</Filter>
+    </ClInclude>
+    <ClInclude Include="shader_h_cpp_files\MotionBlurShader.h">
+      <Filter>Shaders\PostProcesses\MotionBlur</Filter>
+    </ClInclude>
+    <ClInclude Include="tessWaveShader.h">
+      <Filter>Shaders\tesselatedWaveShader</Filter>
+    </ClInclude>
+    <ClInclude Include="SandBottomShader.h">
+      <Filter>Shaders\sandBottom</Filter>
+    </ClInclude>
+    <ClInclude Include="shader_h_cpp_files\HorizontalBlurShader.h">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\Horizontal Blur</Filter>
+    </ClInclude>
+    <ClInclude Include="VerticalBlurShader.h">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\Vertical Blur</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthDarkeningShader.h">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\DepthDarkening</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenWobbleShader.h">
+      <Filter>Shaders\PostProcesses\screenWobble</Filter>
+    </ClInclude>
+    <ClInclude Include="Fish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthShader.h">
+      <Filter>Shaders\DepthShader</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadowShader.h">
+      <Filter>Shaders\ShadowShader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shader_hlsl_cso_files\texture_shader_ps.hlsl">
+      <Filter>Shaders\TextureShader</Filter>
+    </FxCompile>
+    <FxCompile Include="shader_hlsl_cso_files\texture_shader_vs.hlsl">
+      <Filter>Shaders\TextureShader</Filter>
+    </FxCompile>
+    <FxCompile Include="shader_hlsl_cso_files\MotionBlurMain_ps.hlsl">
+      <Filter>Shaders\PostProcesses\MotionBlur</Filter>
+    </FxCompile>
+    <FxCompile Include="tessWave_vs.hlsl">
+      <Filter>Shaders\tesselatedWaveShader</Filter>
+    </FxCompile>
+    <FxCompile Include="tessWave_ps.hlsl">
+      <Filter>Shaders\tesselatedWaveShader</Filter>
+    </FxCompile>
+    <FxCompile Include="tessWave_hs.hlsl">
+      <Filter>Shaders\tesselatedWaveShader</Filter>
+    </FxCompile>
+    <FxCompile Include="tessWave_ds.hlsl">
+      <Filter>Shaders\tesselatedWaveShader</Filter>
+    </FxCompile>
+    <FxCompile Include="sand_bottom_ds.hlsl">
+      <Filter>Shaders\sandBottom</Filter>
+    </FxCompile>
+    <FxCompile Include="sand_bottom_ps.hlsl">
+      <Filter>Shaders\sandBottom</Filter>
+    </FxCompile>
+    <FxCompile Include="sand_bottom_vs.hlsl">
+      <Filter>Shaders\sandBottom</Filter>
+    </FxCompile>
+    <FxCompile Include="sand_bottom_hs.hlsl">
+      <Filter>Shaders\sandBottom</Filter>
+    </FxCompile>
+    <FxCompile Include="horizontalBlur_ps.hlsl">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\Horizontal Blur</Filter>
+    </FxCompile>
+    <FxCompile Include="depthDarkening_ps.hlsl">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\DepthDarkening</Filter>
+    </FxCompile>
+    <FxCompile Include="verticalBlur_ps.hlsl">
+      <Filter>Shaders\PostProcesses\UnderWaterFilter\Vertical Blur</Filter>
+    </FxCompile>
+    <FxCompile Include="screenWobble_ps.hlsl">
+      <Filter>Shaders\PostProcesses\screenWobble</Filter>
+    </FxCompile>
+    <FxCompile Include="PP_general_vs.hlsl">
+      <Filter>Shaders\PostProcesses\_Reusable_Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="depth_ps.hlsl">
+      <Filter>Shaders\DepthShader</Filter>
+    </FxCompile>
+    <FxCompile Include="depth_vs.hlsl">
+      <Filter>Shaders\DepthShader</Filter>
+    </FxCompile>
+    <FxCompile Include="shadow_ps.hlsl">
+      <Filter>Shaders\ShadowShader</Filter>
+    </FxCompile>
+    <FxCompile Include="shadow_vs.hlsl">
+      <Filter>Shaders\ShadowShader</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
