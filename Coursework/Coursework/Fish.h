@@ -14,6 +14,7 @@ public:
 
 	float speed = 3.0f;
 	float Yrotation;
+	int mySprite;
 
 	//update function - controls fish movement as well as billboarding angle
 	void update(XMFLOAT3 camLocation, float dt) {
@@ -62,5 +63,7 @@ public:
 
 		destination.y *= -1;
 		currentLocation.y *= -1;
+
+		mySprite = rand() % 4;
 	}
 };

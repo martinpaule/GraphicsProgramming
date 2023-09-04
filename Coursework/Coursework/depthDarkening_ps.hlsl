@@ -24,7 +24,7 @@ float4 main(InputType input) : SV_TARGET
 
     if (camDepth < -3)
     {
-        colour /= (1+abs(camDepth)/20);
+        colour /= (1+abs(camDepth)/77);
     }
     colour.a = 1.0f;
     return colour;

@@ -550,6 +550,15 @@ void App1::renderFishes() {
 	XMMATRIX viewMatrix = camera->getViewMatrix();
 	XMMATRIX projectionMatrix = renderer->getProjectionMatrix();
 
+	// 1. Sort the fishes by depth (distance from the camera)
+	std::sort(fishies, fishies + fishCount, [&viewMatrix](const Fish& a, const Fish& b) {
+		XMVECTOR aPos = XMVectorSet(a.currentLocation.x, a.currentLocation.y, a.currentLocation.z, 1.0f);
+		XMVECTOR bPos = XMVectorSet(b.currentLocation.x, b.currentLocation.y, b.currentLocation.z, 1.0f);
+		aPos = XMVector3TransformCoord(aPos, viewMatrix);
+		bPos = XMVector3TransformCoord(bPos, viewMatrix);
+		return XMVectorGetZ(aPos) > XMVectorGetZ(bPos);
+	});
+
 	for (int i = 0; i < fishCount; i++) {
 		//update fish movement and billboarding rotation
 		fishies[i].update(camera->getPosition(), deltaTime_);
@@ -564,13 +573,13 @@ void App1::renderFishes() {
 
 
 		//evenly distribute fish texture (tried writing this bit nicer but even if i save the name as wtring and then use .c_str() into wchar it lets me pass the argument but doesn't work, this was the best solution)
-		if (i % 4 == 0) {
+		if (fishies[i].mySprite == 0) {
 			textureShader->setShaderParameters(renderer->getDeviceContext(), worldMatrix, viewMatrix, projectionMatrix, textureMgr->getTexture(L"fish1"),0);
 		}
-		else if (i % 4 == 1) {
+		else if (fishies[i].mySprite == 1) {
 			textureShader->setShaderParameters(renderer->getDeviceContext(), worldMatrix, viewMatrix, projectionMatrix, textureMgr->getTexture(L"fish2"),0);
 		}
-		else if (i % 4 == 2) {
+		else if (fishies[i].mySprite == 2) {
 			textureShader->setShaderParameters(renderer->getDeviceContext(), worldMatrix, viewMatrix, projectionMatrix, textureMgr->getTexture(L"fish3"),0);
 		}
 		else {
@@ -604,9 +613,10 @@ void App1::gui()
 		ImGui::Text("Camera Position: X:%f  Y:%f  Z:%f", camera->getPosition().x, camera->getPosition().y, camera->getPosition().z);
 	}
 	if (ImGui::CollapsingHeader("Controls")) {
-		ImGui::Text("Movement: WASD QE (+Shift to sprint)");
+		ImGui::Text("Movement: WASD QE (+Shift to 'sprint')");
+		ImGui::Text("Camera: RMB + Mouse");
 		ImGui::Text("Consume: C");
-		ImGui::Text("Reset wobble ('sober up'): X");
+		ImGui::Text("Reset Drunk Wobble ('sober up'): X");
 	}
 	if (ImGui::CollapsingHeader("Post Processes")) {
 		ImGui::Checkbox("Motion Blur", &shouldMotionBlur);
